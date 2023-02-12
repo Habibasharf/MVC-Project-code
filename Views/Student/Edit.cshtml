@@ -1,0 +1,36 @@
+﻿@model MVCNew_project.Models.Student
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<form method="Post" asp-action="Edit">
+    <label asp-for="ID"></label>
+    <input asp-for="ID" />
+    <br />
+    <br />
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <br />
+    <label asp-for="Age"></label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age"></span>
+    <br />
+    <br />
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+    <br />
+    <br />
+    <input type="submit" class="btn btn-danger" value="Add" />
+</form>
+@section scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}

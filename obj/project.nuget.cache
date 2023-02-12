@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/Pmw+sIqAKM/cjiDjSg4RoOJMOjPtV8zVRZFwZiRJ8wNSWNmNGh/favHGy3oAmGiMyNH5wcM+QQIXYIJzvfCrA==",
+  "success": true,
+  "projectFilePath": "F:\\ITI\\Linq\\MVCNew-project\\MVCNew-project\\MVCNew-project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\free bytes\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

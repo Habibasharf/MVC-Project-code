@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Student> ;
+@{
+    ViewBag.Title = "Student Data";
+}
+    <br />
+     <br />
+<br />
+<br />
+    <a href="@Url.Action("Create")" class="btn btn-primary my-4">
+        <i class="icofont-plus"></i>
+        Add New
+    </a> 
+    <br />
+    <br />
+        <table class="table table-bordered table-striped ">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Details</th>
+                <th>Delete</th>
+
+            </tr>
+          
+             @foreach (var item in Model)
+             { <tr>
+                 <td>@item.ID</td>
+                 <td>@item.Name</td>
+                 <td>@item.Age</td>
+
+                  <td>@Html.ActionLink( "Details", "Details",new { id = item.ID },new{@class="btn btn-primary"})  @Html.ActionLink( "Edit", "Edit",new { id = item.ID },new{@class="btn btn-primary"})</td>
+                  <td><a asp-action="Delete" asp-route-id="@item.ID" onclick="return confirm('Are you sure')" class="btn btn-danger">Delete</a> </td>
+
+   
+                 </tr>
+             }
+        
+
+        </table>
+

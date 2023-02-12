@@ -1,0 +1,24 @@
+﻿@model MVCNew_project.Models.Department
+
+@{
+    ViewBag.Title = "Edit Department";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<form method="Post" asp-action="Edit" asp-controller="Department">
+    <br />
+    <br />
+    <label asp-for="DeptName"></label>
+    <input asp-for="DeptName" />
+    <br />
+    <br />
+    <label asp-for="Capacity"></label>
+    <input asp-for="Capacity" />
+    <br />
+    <br />
+    <input type="submit" class="btn btn-danger" value="Add" />
+</form>

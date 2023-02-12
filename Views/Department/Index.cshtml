@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Department> ;
+@{
+    ViewBag.Title = "Department Data";
+}
+    <br />
+     <br />
+<br />
+<br />
+<a asp-action="create" asp-controller="Department" class="btn btn-primary my-4">
+        <i class="icofont-plus"></i>
+        Add New
+    </a> 
+
+        <table class="table table-bordered table-striped ">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Details</th>
+                <th>Delete</th>
+
+            </tr>
+          
+        @foreach (var item in Model)
+        { <tr>
+            <td>@item.DeptID</td>
+            <td>@item.DeptName</td>
+            <td>@item.Capacity</td>
+
+             <td>@Html.ActionLink( "Details", "Details",new { id = item.DeptID },new{@class="btn btn-primary"})  @Html.ActionLink( "Edit", "Edit",new { id = item.DeptID },new{@class="btn btn-primary"})</td>
+             <td><a asp-action="Delete" asp-route-id="@item.DeptID" onclick="return confirm('Are you sure')" class="btn btn-danger">Delete</a> </td>
+
+   
+            </tr>
+        }
+        
+
+        </table>
+

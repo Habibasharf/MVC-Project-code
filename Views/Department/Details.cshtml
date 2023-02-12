@@ -1,0 +1,17 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Department Details";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<ul class="list-group list-group-item-text" style="width:500px; height:500px; margin-top:50px;">
+    <li class="list-group-item" style="background-color:darkgray; font-size:medium;">
+       @Model.DeptID
+    </li>
+    <li class="list-group-item" style="margin-top:20px;">@Model.DeptName</li>
+    <li class="list-group-item" style="margin-top:20px;">@Model.Capacity</li>
+</ul>

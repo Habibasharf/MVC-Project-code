@@ -1,0 +1,21 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<ul class="list-group list-group-item-text" style="width:500px; height:500px; margin-top:50px;">
+    <img src="~/images/@Model.ImageName" class="img img-holder" style="width:200px;height:250px"/>
+    <li class="list-group-item" style="background-color:darkgray; font-size:medium;">
+       @Model.ID
+    </li>
+    <li class="list-group-item" style="margin-top:20px;">@Model.Name</li>
+    <li class="list-group-item" style="margin-top:20px;">@Model.Age</li>
+</ul>
+<br />
+<br />
+<p>@Html.ActionLink( "Download", "Download",new { id = Model.ID },new{@class="btn btn-primary"})</p>
